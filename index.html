@@ -575,7 +575,9 @@
             
             .services .container { grid-template-columns: 1fr; }
             .services-text { order: 2; }
-            .services-visual { order: 1; aspect-ratio: 16/9; }
+            /* Remove a trava de proporção e deixa a imagem expandir 100% da sua altura */
+            .services-visual { order: 1; aspect-ratio: auto; }
+            .services-visual img { height: auto; }
             
             .contact-content { grid-template-columns: 1fr; }
         }
@@ -617,7 +619,7 @@
     <header class="header" id="header">
         <div class="container">
             <a href="#" aria-label="Início">
-                <img src="https://vtkfzjoqrcisvwpdwwfe.supabase.co/storage/v1/object/public/assets-sites/grupo-coli/472416709_2540625626143155_3799584272669146155_n-removebg-preview.png" alt="Logo Grupo Coli" class="logo">
+                <img src="https://vtkfzjoqrcisvwpdwwfe.supabase.co/storage/v1/object/public/assets-sites/grupo-coli/logo.png" alt="Logo Grupo Coli" class="logo">
             </a>
             
             <nav class="nav-desktop">
@@ -654,8 +656,8 @@
                 <h1 class="stagger-text">
                     <span style="animation-delay: 0.05s">Somos</span>
                     <span style="animation-delay: 0.1s">o</span>
-                    <span style="animation-delay: 0.15s">Grupo</span>
-                    <span style="animation-delay: 0.2s">Coli.</span>
+                    <span class="text-accent" style="animation-delay: 0.15s">Grupo</span>
+                    <span class="text-accent" style="animation-delay: 0.2s">Coli.</span>
                     <br>
                     <span style="animation-delay: 0.25s">O</span>
                     <i style="animation-delay: 0.3s">Gigante</i>
@@ -671,7 +673,7 @@
             <div class="hero-visual reveal" style="transition-delay: 0.3s;">
                 <div class="hero-visual-wrapper">
                     <div class="hero-visual-placeholder">
-                        <img src="https://wsrv.nl/?url=www.grupocoli.com.br/texto/files/16745773682732__mg_0736.jpg" alt="Fachada Grupo Coli" class="hero-visual-img parallax-img">
+                        <img src="https://vtkfzjoqrcisvwpdwwfe.supabase.co/storage/v1/object/public/assets-sites/grupo-coli/fachada.jpg" alt="Fachada Grupo Coli" class="hero-visual-img parallax-img">
                         <div class="hero-overlay"></div>
                     </div>
                 </div>
@@ -1042,8 +1044,11 @@
                 </div>
             </div>
             
-            <div class="footer-bottom">
-                <p>© 2025 Grupo Coli — Materiais de Construção. Todos os direitos reservados.</p>
+            <div class="footer-bottom" style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                <p style="margin: 0;">© 2025 Grupo Coli — Materiais de Construção. Todos os direitos reservados.</p>
+                <a href="https://www.instagram.com/codex_systemss/" target="_blank" style="font-size: 11px; opacity: 0.5; color: var(--c-text-sec); display: inline-flex; align-items: center; gap: 4px; transition: opacity 0.3s ease; text-decoration: none;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.5'">
+                    Desenvolvido por Codex Systems <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
             </div>
         </div>
     </footer>
